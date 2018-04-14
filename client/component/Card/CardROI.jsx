@@ -48,7 +48,7 @@ const CardROI = ({ coin }) => {
       </div>
       <div className="mb-5">
         <div className="h3">
-          { numeral(mns * mncoins).format('0,0.0000') } BWK
+          { numeral(mns * mncoins).format('0,0.0000') } HASH
         </div>
         <div className="h5">
           Coins Locked

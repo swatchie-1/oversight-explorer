@@ -32,7 +32,7 @@ class CoinSummary extends Component {
     return (
       <div>
         <div className="row">
-          <div className="col-md-12 col-lg-9">
+          <div className="col-md-12">
             <div className="row">
               <div className="col-md-12 col-lg-6">
                 <CardStatus
@@ -67,12 +67,6 @@ class CoinSummary extends Component {
                   yAxis={ this.props.coins.map(c => c.mnsOn ? c.mnsOn : 0.0) } />
               </div>
             </div>
-          </div>
-          <div className="col-md-12 col-lg-3">
-            <WatchList
-              items={ this.props.watch }
-              onSearch={ this.props.onSearch }
-              onRemove={ this.props.onRemove } />
           </div>
         </div>
       </div>

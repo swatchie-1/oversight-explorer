@@ -1,8 +1,4 @@
-![Bulwark Logo](https://bulwarkcrypto.com/wp-content/uploads/2018/04/blockexplorer.svg)
-
-Bulwark Block Explorer 
-&middot;
-[![GitHub license](https://img.shields.io/github/license/dustinengle/blockex.svg)](https://github.com/dustinengle/blockex/blob/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/dustinengle/blockex.svg)](https://github.com/dustinengle/blockex/issues) [![Discord](https://img.shields.io/discord/374271866308919296.svg)](https://discord.me/bulwarkcrypto)
+Block Explorer 
 =====
 
 Simple cryptocurrency block explorer system.
@@ -20,13 +16,7 @@ https://nodejs.org/en/download/package-manager/
 
 https://yarnpkg.com/lang/en/docs/install/
 
-It is also required to have the Bulwark daemon running in the background. It is recommended to set this up before beginning to set up the explorer so that it syncs by the time you need it.
-
-Our geniuses here at BulwarkCorp™ have put together a script to do this for you. Just run
-
-`bash script/bulwarkd_setup.sh`
-
-This will install the latest Bulwark wallet and create a rpc username/password before starting the daemon.
+It is also required to have the b-hash daemon running in the background. It is recommended to set this up before beginning to set up the explorer so that it syncs by the time you need it.
 
 ## Install
 `git clone https://github.com/dustinengle/blockex.git` - copy repo to local folder.
@@ -74,17 +64,3 @@ To setup the crontab please see run `crontab -e` to edit the crontab and paste t
 
 ## Build
 At this time only the client web interface needs to be built using webpack and this can be done by running `yarn run build:web`.  This will bundle the application and put it in the `/public` folder for delivery.
-
-## Run
-`yarn run start:api` - will start the api.
-
-`yarn run start:web` - will start the web, open browser [http://localhost:8081](http://localhost:8081).
-
-## Test
-`yarn run test:client` - will run the client side tests.
-
-`yarn run test:server` - will test the rpc connection, database connection, and api endpoints.
-
-## To-Do
-- Write more tests
-- Cluster support for api

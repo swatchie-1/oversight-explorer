@@ -29,14 +29,13 @@ export default class MenuDesktop extends Component {
 
     return props.links.map((i, idx) => {
       const isActive = (props.location.pathname === i.href);
-      const iconSource = i.icon.split('.svg')[0] + '_white.svg';
 
       return (
         <Link
           key={ idx }
           className={ `menu-desktop__item ${ isActive? 'menu-desktop__item--is-active' : '' }` }
           to={ i.href }>
-          <img className="menu-desktop__item-icon" src={ iconSource } />
+          <Icon name={ i.icon } />
           <span className="menu-desktop__item-label" >{ i.label }</span>
           <Icon name="caret-left" className="menu-desktop__item-indicator" />
         </Link>
@@ -52,7 +51,7 @@ export default class MenuDesktop extends Component {
       <div className={ `menu-desktop ${ this.state.isOpen ? 'menu-desktop--open' : 'menu-desktop--close' }` }>
         <div className="menu-desktop__content-wrapper">
           <div className="menu-desktop__header">
-            <img src="/img/whitelogo.svg" className="menu-desktop__logo" />
+            <img src="/img/bhash.png" className="menu-desktop__logo" />
             <a onClick={ this.handleToggle } >
               <Icon name="bars" className="menu-desktop__toggle" onClick={ this.handleToggle } />
             </a>
