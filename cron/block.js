@@ -75,7 +75,7 @@ async function syncBlocks(current, stop) {
           const utxo = [];
           rpctx.vout.forEach((vout) => {
             const to = {
-              address: vout.scriptPubKey.addresses[0], // TODO - revisit
+              address: vout.scriptPubKey ? vout.scriptPubKey.addresses[0] : 'NONE', // TODO - revisit
               blockHeight: block.height,
               n: vout.n,
               value: vout.value
