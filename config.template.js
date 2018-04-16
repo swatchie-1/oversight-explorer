@@ -4,14 +4,14 @@
  */
 const config = {
   'api': {
-    'host': 'http://51.15.93.102',
+    'host': 'http://explorer.methuselahcoin.io',
     'port': '80',
     'prefix': '/api',
     'timeout': '5s'
   },
   'coinMarketCap': {
     'api': 'http://api.coinmarketcap.com/v1/ticker/',
-    'ticker': 'bulwark'
+    'ticker': 'methuselah'
   },
   'db': {
     'host': '127.0.0.1',
@@ -25,8 +25,8 @@ const config = {
   },
   'rpc': {
     'host': '127.0.0.1',
-    'port': '52541',
-    'user': 'bulwarkrpc',
+    'port': '7556',
+    'user': 'methuselahrpc',
     'pass': 'someverysafepassword',
     'timeout': 8000, // 8 seconds
   }

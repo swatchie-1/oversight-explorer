@@ -16,7 +16,7 @@ https://nodejs.org/en/download/package-manager/
 
 https://yarnpkg.com/lang/en/docs/install/
 
-It is also required to have the b-hash daemon running in the background. It is recommended to set this up before beginning to set up the explorer so that it syncs by the time you need it.
+It is also required to have the Methuselah daemon running in the background. It is recommended to set this up before beginning to set up the explorer so that it syncs by the time you need it.
 
 ## Install
 `git clone https://github.com/dustinengle/blockex.git` - copy repo to local folder.

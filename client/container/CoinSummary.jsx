@@ -34,7 +34,7 @@ class CoinSummary extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="row">
-              <div className="col-md-12 col-lg-6">
+              <div className="col-md-12 col-lg-4">
                 <CardStatus
                   blocks={ this.props.txs.length
                     ? this.props.txs[0].blockHeight
@@ -43,23 +43,14 @@ class CoinSummary extends Component {
                   peers={ coin.peers }
                   status={ coin.status } />
               </div>
-              <div className="col-md-12 col-lg-6">
+              <div className="col-md-12 col-lg-4">
                 <CardNetworkSummary
                   difficulty={ coin.diff }
                   hashps={ coin.netHash }
                   xAxis={ this.props.coins.map(c => c.createdAt) }
                   yAxis={ this.props.coins.map(c => c.diff ? c.diff : 0.0) } />
               </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12 col-lg-6">
-                <CardMarket
-                  btc={ coin.btc }
-                  usd={ coin.usd }
-                  xAxis={ this.props.coins.map(c => c.createdAt) }
-                  yAxis={ this.props.coins.map(c => c.usd ? c.usd : 0.0) } />
-              </div>
-              <div className="col-md-12 col-lg-6">
+              <div className="col-md-12 col-lg-4">
                 <CardMasternodeSummary
                   offline={ coin.mnsOff }
                   online={ coin.mnsOn }
