@@ -4,8 +4,8 @@
  */
 const config = {
   'api': {
-    'host': 'http://explorer.methuselahcoin.io',
-    'port': '80',
+    'host': 'https://explorer.methuselahcoin.io',
+    'port': '3000',
     'prefix': '/api',
     'timeout': '5s'
   },
