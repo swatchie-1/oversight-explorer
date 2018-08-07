@@ -11,12 +11,8 @@ import HorizontalRule from '../component/HorizontalRule';
 import Table from '../component/Table';
 
 class Top100 extends Component {
-  static defaultProps = {
-    coin: {}
-  };
-
   static propTypes = {
-    coin: PropTypes.object.isRequired,
+    getSupply: PropTypes.func.isRequired,
     getTop100: PropTypes.func.isRequired
   };
 
@@ -29,12 +25,19 @@ class Top100 extends Component {
         { key: 'value', title: 'Total' },
         { key: 'percent', title: '%' },
       ],
+      supply: 0.0,
       wallets: []
     };
   };
 
   componentDidMount() {
-    this.props.getTop100().then(wallets => this.setState({ wallets }));
+    this.props
+      .getTop100()
+      .then((wallets) => {
+        this.setState({ wallets });
+        return this.props.getSupply();
+      })
+      .then(res => this.setState({ supply: res.t }));
   };
 
   render() {
@@ -43,26 +46,25 @@ class Top100 extends Component {
         <HorizontalRule title="Top 100" />
         <Table
           cols={ this.state.cols }
-          data={ this.state.wallets.map((wallet, idx) => ({
-            ...wallet,
-            address: (
-              <Link to={ `/address/${ wallet.address }` }>{ wallet.address }</Link>
-            ),
-            index: idx + 1,
-            percent: numeral((wallet.value / this.props.coin.supply) * 100.0).format('0,0.00'),
-            value: numeral(wallet.value).format('0,0.0000')
-          })) } />
+          data={ this.state.wallets.map((wallet, idx) => {
+            return {
+              ...wallet,
+              address: (
+                <Link to={ `/address/${ wallet.address }` }>{ wallet.address }</Link>
+              ),
+              index: idx + 1,
+              percent: numeral((wallet.value / this.state.supply) * 100.0).format('0,0.00'),
+              value: numeral(wallet.value).format('0,0.0000')
+            };
+          }) } />
       </div>
     );
   };
 }
 
 const mapDispatch = dispatch => ({
+  getSupply: () => Actions.getSupply(),
   getTop100: () => Actions.getTop100()
 });
 
-const mapState = state => ({
-  coin: state.coin
-});
-
-export default connect(mapState, mapDispatch)(Top100);
+export default connect(null, mapDispatch)(Top100);
