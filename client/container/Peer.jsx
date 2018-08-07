@@ -20,7 +20,7 @@ class Peer extends Component {
         { key: 'ip', title: 'Address' },
         { key: 'ver', title: 'Protocol' },
         { key: 'subver', title: 'Sub-version' },
-        { key: 'country', title: 'Country' },
+        { key: 'countryCode', title: 'Country' },
       ],
       loading: true,
       peers: []
