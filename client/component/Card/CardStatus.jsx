@@ -52,7 +52,15 @@ export default class CardStatus extends Component {
         <div className="card__row">
           <span className="card__label">Peers:</span>
           <span className="card__result">
-            <Link to="/peer">{ this.props.peers }</Link>
+            <Link to="/peer">
+              <b>
+                <CountUp
+                  decimals={ 0 }
+                  duration={ 1 }
+                  end={ this.props.peers }
+                  start={ 0 } />
+              </b>
+            </Link>
           </span>
         </div>
         <div className="card__row">

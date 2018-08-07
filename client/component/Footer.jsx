@@ -25,11 +25,9 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="footer__block">
-          <img className="footer__logo" src="/img/methuselah_dark.png" />
           <span className="footer__legal">
             <div>Copyright &copy; 2018 <a href="https://bulwarkcrypto.com/">Bulwark Cryptocurrency</a></div>
             <div>Copyright &copy; 2018 <a href="https://methuselahcoin.io/">Methuselah Cryptocurrency</a></div>
-            <div>Site design / Logo &copy; 2018 <a href="https://bulwarkcrypto.com/">Bulwark Cryptocurrency</a></div>
             <div>Site design / Logo &copy; 2018 <a href="https://methuselahcoin.io/">Methuselah Cryptocurrency</a></div>
           </span>
         </div>

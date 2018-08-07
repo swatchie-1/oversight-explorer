@@ -1,7 +1,7 @@
 
 .api {
 
-	$detail-background-color: #323d50;
+	$detail-background-color: rgba(255, 255, 255, 0.3);
 
 	/*@include media-breakpoint-up(md) {
 		flex-direction: column;
@@ -33,7 +33,7 @@
 	}
 
 	&__section-sub-heading {
-		font-color: $gray;
+		color: $gray;
 	}
 
 	&__call {
@@ -46,7 +46,7 @@
 	}
 
 	&__call-detail {
-		color: $white;
+		color: $black;
 		cursor: pointer;
 		position: absolute;
 		right: -95%;
@@ -62,7 +62,7 @@
 
 	&__call-detail-indicator {
 		display: none;
-		color: $white;
+		color: $black;
 		position: absolute;
 		top: .13em;
 		right: -32px;

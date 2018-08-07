@@ -100,7 +100,7 @@
 		transition: all 1s cubic-bezier(0, 1, .5, 1);
 
 		&:hover {
-			color: $white;
+			color: $green;
 			text-decoration: none;
 		}
 
@@ -139,7 +139,7 @@
 		margin: 0 auto;
 		position: relative;
 		&:hover {
-			color: $white;
+			color: $green;
 			text-decoration: none;
 		}
 	}
@@ -200,12 +200,12 @@
 		color: $white;
 		font-family: $fontLarge;
 		font-size: 18px;
-		transition: all 1s cubic-bezier(0, 1, .5, 1);
+		/*transition: all 1s cubic-bezier(0, 1, .5, 1);*/
 	}
 
 	a:hover {
-		color: $gray-light;
-		transition: all 1s cubic-bezier(0, 1, .5, 1);
+		color: $green;
+		/*transition: all 1s cubic-bezier(0, 1, .5, 1);*/
 	}
 }
 

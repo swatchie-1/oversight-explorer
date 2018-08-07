@@ -7,7 +7,7 @@ $blue-light: #2ba2f8;
 $gray: #adadad;
 $gray-dark: #354052;
 $gray-light: #e8e8e8;
-$green: #61d75e;
+$green: #39b54a;
 $red: #ed1c24;
 $orange: #f7981c;
 $white: #ffffff;
@@ -53,19 +53,19 @@ $pagination-line-height:            1;
 $pagination-color:                  $gray;
 $pagination-bg:                     $white;
 $pagination-border-width:           1px;
-$pagination-border-color:           $gray;
+$pagination-border-color:           $gray-light;
 
-$pagination-hover-color:            $blue;
+$pagination-hover-color:            $green;
 $pagination-hover-bg:            	$white;
-$pagination-hover-border-color:    	$blue;
+$pagination-hover-border-color:    	$gray-light;
 
-$pagination-active-color:           $black;
+$pagination-active-color:           $green;
 $pagination-active-bg:           	$white;
 $pagination-active-border-color:    $gray-light;
 
-$pagination-disabled-color:         $gray;
+$pagination-disabled-color:         $gray-light;
 $pagination-disabled-bg:            $gray-light;
-$pagination-disabled-border-color:  $gray;
+$pagination-disabled-border-color:  $gray-light;
 
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./sass/font";
@@ -90,6 +90,9 @@ $pagination-disabled-border-color:  $gray;
 
 /* Reset */
 html, body {
+	background: url('/img/methuselah-tree.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -103,18 +106,23 @@ a, a:visited {
 }
 
 a:hover {
-	color: $blue;
+	color: $green;
 	text-decoration: none;
 	transition: all 1s cubic-bezier(0, 1, .5, 1);
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: $green;
 	display: inline-block;
 	font-weight: bolder;
 }
 
 #react-app {
 	height: 100%;
+}
+
+.page-link {
+	height: 36px;
 }
 
 .page-wrapper {
@@ -163,6 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Content Wrapper
 .content {
+	background: transparent;
 	flex: 1;
 	overflow-y: auto;
 
@@ -186,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 	*/
 
     &__wrapper {
-		background-color: $white;
+		background: transparent;
 	    margin: 0 auto;
 	    min-height: 80vh;
 		padding: 1em 2em 2em;

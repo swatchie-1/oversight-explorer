@@ -40,11 +40,7 @@ export default class CardPrice extends Component {
             start={ 0 }
             suffix={ ' SAP' } />
         </p>
-        <div className="card__info row">
-          <div className="col-sm-12 col-md-6 col-lg-4">
-            <p className="card__info-source">Data from Crex24</p>
-          </div>
-        </div>
+        <p className="card__data-sub">Data from Crex24</p>
       </Card>
     );
   };
