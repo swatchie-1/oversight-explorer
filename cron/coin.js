@@ -21,7 +21,7 @@ async function syncCoin() {
   const masternodes = await rpc.call('masternode', ['list']);
   const nethashps = await rpc.call('getnetworkhashps');
 
-  let market = {}; // await fetch(url);
+  let market = await fetch(url);
   if (Array.isArray(market)) {
     market = market.length ? market[0] : {};
   }
@@ -37,18 +37,18 @@ async function syncCoin() {
   }
 
   const coin = new Coin({
-    cap: market.market_cap_usd || 0,
+    cap: market.baseVolume || 0,
     createdAt: date,
     blocks: info.blocks,
-    btc: market.price_btc || 0,
+    btc: market.last || 0,
     diff: info.difficulty,
     mnsOff,
     mnsOn,
     netHash: nethashps,
     peers: info.connections,
     status: 'Online',
-    supply: market.available_supply || 0, // TODO: change to actual count from db.
-    usd: market.price_usd || 0
+    supply: 0, // TODO: change to actual count from db.
+    usd: 0
   });
 
   await coin.save();

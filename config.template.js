@@ -10,8 +10,8 @@ const config = {
     'timeout': '5s'
   },
   'coinMarketCap': {
-    'api': 'http://api.coinmarketcap.com/v1/ticker/',
-    'ticker': 'methuselah'
+    'api': 'https://api.crex24.com/v2/public/tickers?instrument=',
+    'ticker': 'SAP-BTC'
   },
   'db': {
     'host': '127.0.0.1',
