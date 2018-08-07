@@ -9,7 +9,7 @@ import CountUp from '../CountUp';
 import GraphLine from '../Graph/GraphLine';
 import Icon from '../Icon';
 
-export default class CardStatus extends Component {
+export default class CardMarket extends Component {
   static defaultProps = {
     btc: 0.0,
     usd: 0.0,

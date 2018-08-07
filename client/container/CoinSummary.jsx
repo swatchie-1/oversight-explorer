@@ -7,9 +7,9 @@ import React from 'react';
 
 import Icon from '../component/Icon';
 
-import CardMarket from '../component/Card/CardMarket';
 import CardMasternodeSummary from '../component/Card/CardMasternodeSummary';
 import CardNetworkSummary from '../component/Card/CardNetworkSummary';
+import CardPrice from '../component/Card/CardPrice';
 import CardStatus from '../component/Card/CardStatus';
 import WatchList from '../component/WatchList';
 
@@ -34,7 +34,7 @@ class CoinSummary extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="row">
-              <div className="col-md-12 col-lg-4">
+              <div className="col-md-12 col-lg-3">
                 <CardStatus
                   blocks={ this.props.txs.length
                     ? this.props.txs[0].blockHeight
@@ -43,14 +43,19 @@ class CoinSummary extends Component {
                   peers={ coin.peers }
                   status={ coin.status } />
               </div>
-              <div className="col-md-12 col-lg-4">
+              <div className="col-md-12 col-lg-3">
+                <CardPrice
+                  btc={ coin.btc }
+                  volume={ coin.cap } />
+              </div>
+              <div className="col-md-12 col-lg-3">
                 <CardNetworkSummary
                   difficulty={ coin.diff }
                   hashps={ coin.netHash }
                   xAxis={ this.props.coins.map(c => c.createdAt) }
                   yAxis={ this.props.coins.map(c => c.diff ? c.diff : 0.0) } />
               </div>
-              <div className="col-md-12 col-lg-4">
+              <div className="col-md-12 col-lg-3">
                 <CardMasternodeSummary
                   offline={ coin.mnsOff }
                   online={ coin.mnsOn }

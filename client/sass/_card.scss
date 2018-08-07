@@ -1,5 +1,5 @@
 .card {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.25;
 	margin-top: 16px;
 	margin-bottom: 16px;
@@ -48,7 +48,7 @@
 		padding-right: 10px;
 
 		@include media-breakpoint-up(md) {
-			min-width: 200px;
+			min-width: 0;
 		}
 	}
 
@@ -88,7 +88,6 @@
 	}
 
 	&--market &__info {
-		display: flex;
 		margin-top: .5em;
 	}
 
@@ -97,9 +96,9 @@
 	}
 
 	&--market &__data-main {
-		font-size: 48px;
+		font-size: 22px;
 		font-weight: bold;
-		line-height: .75;
+		line-height: 1;
 	}
 
 	&--market &__data-sub {
