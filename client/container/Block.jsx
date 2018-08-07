@@ -30,9 +30,10 @@ class Block extends Component {
     this.getBlock();
   };
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     const { params: { hash } } = this.props.match;
     if (!!this.state.block.hash
+      && hash !== prevProps.match.params.hash
       && hash !== this.state.block.hash
       && hash !== this.state.block.height.toString()) {
       this.getBlock();
