@@ -23,12 +23,12 @@ async function syncMasternode() {
   const inserts = [];
   await forEach(mns, async (mn) => {
     const masternode = new Masternode({
-      active: mn.activetime,
+      active: 0,
       addr: mn.addr,
       createdAt: date,
       lastAt: new Date(mn.lastseen * 1000),
       lastPaidAt: new Date(mn.lastpaid * 1000),
-      network: mn.network,
+      network: mn.ip.substr(0, 1) === '[' ? 'IPv6' : 'IPv4',
       rank: mn.rank,
       status: mn.status,
       txHash: mn.txhash,

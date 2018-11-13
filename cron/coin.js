@@ -18,7 +18,7 @@ async function syncCoin() {
   const url = `${ config.coinMarketCap.api }${ config.coinMarketCap.ticker }`;
 
   const info = await rpc.call('getinfo');
-  const masternodes = await rpc.call('masternode', ['list']);
+  const masternodes = await rpc.call('masternodelist');
   const nethashps = await rpc.call('getnetworkhashps');
 
   let market = await fetch(url);
@@ -28,13 +28,13 @@ async function syncCoin() {
 
   let mnsOff = 0;
   let mnsOn = 0;
-  for(const k in masternodes) {
-    if (masternodes[k] === 'ENABLED') {
+  masternodes.forEach(m => {
+    if (m.status === 'ENABLED') {
       mnsOn++;
     } else {
       mnsOff++;
     }
-  }
+  });
 
   const coin = new Coin({
     cap: market.baseVolume || 0,
