@@ -1,6 +1,6 @@
 
 /* Variables */
-$black: #222222;
+$black: #000000;
 $blue: #1991eb;
 $blue-dark: #595ff5;
 $blue-light: #2ba2f8;
@@ -16,8 +16,8 @@ $white-light: rgba(255,255,255,.5);
 $margin: 1rem;
 $margin-lg: 1.5rem;
 
-$menu-gradient-main: #000000;
-$menu-gradient-secondary: #000000;
+$menu-gradient-main: #39b54a;
+$menu-gradient-secondary: #30b040;
 $menu-width-open: 240px;
 $menu-width-close: 110px;
 $menu-mobile-height: 70px;
@@ -51,17 +51,17 @@ $pagination-padding-x-lg:           12px;
 $pagination-line-height:            1;
 
 $pagination-color:                  $gray;
-$pagination-bg:                     $white;
+$pagination-bg:                     $black;
 $pagination-border-width:           1px;
-$pagination-border-color:           $gray-light;
+$pagination-border-color:           $gray;
 
 $pagination-hover-color:            $green;
-$pagination-hover-bg:            	$white;
-$pagination-hover-border-color:    	$gray-light;
+$pagination-hover-bg:            	$black;
+$pagination-hover-border-color:    	$gray;
 
 $pagination-active-color:           $green;
-$pagination-active-bg:           	$white;
-$pagination-active-border-color:    $gray-light;
+$pagination-active-bg:           	$black;
+$pagination-active-border-color:    $gray;
 
 $pagination-disabled-color:         $gray-light;
 $pagination-disabled-bg:            $gray-light;
@@ -90,9 +90,12 @@ $pagination-disabled-border-color:  $gray-light;
 
 /* Reset */
 html, body {
+	/*
 	background: url('/img/methuselah-tree.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	*/
+	background-color: $black;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -101,12 +104,12 @@ html, body {
 }
 
 a, a:visited {
-	color: $gray-dark;
+	color: $green;
 	text-decoration: none;
 }
 
 a:hover {
-	color: $green;
+	color: $white;
 	text-decoration: none;
 	transition: all 1s cubic-bezier(0, 1, .5, 1);
 }

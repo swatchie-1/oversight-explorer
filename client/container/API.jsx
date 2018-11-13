@@ -22,7 +22,9 @@ export default class API extends Component {
     return (
       <div className="api">
         <div className="api__documentation">
+          <br />
           <HorizontalRule className="api__documentation-title" title="API Documentation" />
+          <br />
           <div className="pr-4">
             <p className="api__intro">
              The block explorer provides an API allowing users and/or applications to retrieve information from the network without the need for a local wallet.
@@ -32,8 +34,7 @@ export default class API extends Component {
             </div>
           </div>
         </div>
-        <div className="api__detail">
-        </div>
+        <div className="api__detail"></div>
       </div>
     );
   };

@@ -5,6 +5,7 @@
 	background-color: transparent;
 	border-top: 1px solid rgba(34, 34, 34, 0.1);
 	bottom: 0;
+	color: $white;
 	flex-wrap: wrap;
 	font-size: .8em;
 	padding-top: 2em;
@@ -65,7 +66,7 @@
 
 		&:hover,
 		&:focus {
-			color: initial;
+			color: $green;
 		}
 
 	}

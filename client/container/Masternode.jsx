@@ -27,7 +27,6 @@ class Masternode extends Component {
     this.state = {
       cols: [
         { key: 'lastPaidAt', title: 'Last Paid' },
-        { key: 'active', title: 'Active' },
         { key: 'addr', title: 'Address' },
         { key: 'txHash', title: 'Collateral TX' },
         { key: 'txOutIdx', title: 'Index' },

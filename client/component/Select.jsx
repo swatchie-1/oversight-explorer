@@ -6,11 +6,12 @@ class App extends Component {
   render() {
     const settings = {
       style: {
-        background: '#ffffff',
-        borderColor: '#e8e8e8',
+        background: '#000000',
+        borderColor: '#adadad',
         borderRadius: 5,
         borderWidth: 1,
-        padding: '5px 10px'
+        padding: '5px 10px',
+        textColor: '#adadad'
       },
     };
 

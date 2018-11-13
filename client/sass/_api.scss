@@ -1,7 +1,7 @@
 
 .api {
-
-	$detail-background-color: rgba(255, 255, 255, 0.3);
+	color: $white;
+	$detail-background-color: rgba(255, 255, 255, 0.1);
 
 	/*@include media-breakpoint-up(md) {
 		flex-direction: column;
@@ -46,7 +46,7 @@
 	}
 
 	&__call-detail {
-		color: $black;
+		color: $white;
 		cursor: pointer;
 		position: absolute;
 		right: -95%;
@@ -54,7 +54,7 @@
 		width: 80%;
 
 		@include media-breakpoint-down(sm) {
-			color: $black;
+			color: $white;
 			margin-top: 1em;
 			position: initial;
 		}
@@ -62,7 +62,7 @@
 
 	&__call-detail-indicator {
 		display: none;
-		color: $black;
+		color: $white;
 		position: absolute;
 		top: .13em;
 		right: -32px;

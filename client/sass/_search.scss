@@ -8,6 +8,7 @@
 	}
 
 	&__icon {
+		color: $white;
 		position: absolute;
 		left: 1em;
 		margin-right: 1em;
@@ -16,7 +17,7 @@
 	}
 
 	&__input {
-		border: 1px solid $gray-light;
+		border: 1px solid $gray;
 	  	border-radius: 5px;
 	  	margin: 0;
 		padding: 25px;
