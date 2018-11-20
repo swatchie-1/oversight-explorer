@@ -31,7 +31,7 @@ async function syncPeer() {
     let geoip = await fetch(url);
 
     const p = new Peer({
-      _id: geoip.ip ? geoip.ip : parts[0],
+      _id: geoip.ip ? geoip.ip : peer.addr,
       country: geoip.country_name,
       countryCode: geoip.countryCode,
       createdAt: date,
