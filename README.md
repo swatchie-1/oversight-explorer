@@ -1,4 +1,9 @@
-Block Explorer 
+Block Explorer : Check http://oversight.hiluxcoin.com
+Also http://insight.hiluxcoin.com/insight
+And
+http://explorer.hiluxcoin.com
+
+In total we have 3 transparent Block Explorers which is our intention of being upfront to everyone.
 =====
 
 Simple cryptocurrency block explorer system.
